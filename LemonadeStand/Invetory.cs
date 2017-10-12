@@ -8,5 +8,17 @@ namespace LemonadeStand
 {
     class Invetory
     {
+        //member variables
+
+        
+        //constructor
+        public Invetory()
+        {
+
+        }
+
+        //member methods
+        List<int> numberOfLemons = new List<int>
+
     }
 }

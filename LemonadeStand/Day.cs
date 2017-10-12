@@ -9,8 +9,8 @@ namespace LemonadeStand
     class Day
     {
         //member variables
-        public int day;
-        private int i;
+        public Weather weather;
+        List<int> customers = new List<int>();
 
         //constructor
         public Day()

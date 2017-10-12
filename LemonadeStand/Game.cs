@@ -9,6 +9,9 @@ namespace LemonadeStand
     class Game
     {
         // member variables
+        public Player player;
+        public Day day;
+        public Store store;
 
 
 
@@ -31,7 +34,7 @@ namespace LemonadeStand
 
         }
 
-        displayWeatherCurrentDay()
+        public void displayWeatherCurrentDay()
         {
 
         }
@@ -52,7 +55,7 @@ namespace LemonadeStand
 
 
             Console.WriteLine("Would you like to restock on any items?");
-            bool restockAnswer = Console.ReadLine();
+            bool restockAnswer = Console.ReadLine(); 
             if (!restockAnswer)
             {
                 // continue to playing game
@@ -65,52 +68,37 @@ namespace LemonadeStand
 
         private void buyItems()
         {
-            Console.WriteLine("Enter what you want to purchase more of: \n CUPS - LEMONS - SUGAR - RASPBERRYS - ICE CUBES");
+            Console.WriteLine("Enter what you want to purchase more of: \n\r CUPS - LEMONS - SUGAR - RASPBERRYS - ICE CUBES");
             string userInput = Console.ReadLine();
             switch (userInput)
             {
                 case "cups":
-                    buyCups();
+                    
                     break;
                 case "lemon":
-                    buyLemons();
+                    
                     break;
                 case "sugar":
-                    buySugar();
+                    
                     break;
                 case "raspberry":
-                    buyRaspberrys();
+                    
                     break;
                 case "ice cubes":
-                    buyIceCubes();
+                    
                     break;
            }
         }
 
-        private void buyCups()
-        {
-            Console.WriteLine("You currently have, " + invetoryCups + "cups. Enter how many you would like to buy. \n 25 - 50 - 100");
-        }
 
-        private void buyLemons()
-        {
 
-        }
 
-        private void buySugar()
-        {
 
-        }
 
-        private void buyRaspberrys()
-        {
 
-        }
+
         
-        private void buyIceCubes()
-        {
 
-        }
 
 
 

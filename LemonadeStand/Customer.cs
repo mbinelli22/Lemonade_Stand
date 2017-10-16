@@ -8,5 +8,22 @@ namespace LemonadeStand
 {
     class Customer
     {
+        //member variables
+        int percentChanceToBuy;
+
+
+        //constructor
+        public Customer()
+        {
+
+        }
+
+        //member methods
+
+        List<string> customers = new List<string>();
+
+
+
+
     }
 }

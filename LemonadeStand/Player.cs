@@ -11,8 +11,14 @@ namespace LemonadeStand
         //bank
         // invetory -> in invetory have a list of lemons etc
         //recipe
-    
-        private string playerOne;
+
+        //member variables
+        public Invetory invetory;
+        public Recipe recipe;
+        public Bank bank;
+
+        
+        //constructor  
 
         public Player()
         {
@@ -25,5 +31,7 @@ namespace LemonadeStand
             string playerOne = Console.ReadLine();
             Console.WriteLine("Welcome To " + playerOne + "'s Lemonade Stand!");
         }
+
+
     }
 }

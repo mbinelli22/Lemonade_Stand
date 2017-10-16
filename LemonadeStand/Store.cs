@@ -9,11 +9,11 @@ namespace LemonadeStand
     class Store
     {
         //member variables
-        public string cups;
-        public string lemons;
-        public string sugar;
-        public string iceCubes;
-        public string raspberrys;
+        public int cups;
+        public int lemons;
+        public int sugar;
+        public int iceCubes;
+        public int raspberrys;
 
         //constructor
         public Store()
@@ -23,34 +23,72 @@ namespace LemonadeStand
 
         //member methods
 
-        public void SellHops(Player player)
-        {
-            int numberOfHops = 10;
-            double priceOfHops = 2.50;
-
-            Hops hop = new Hops();
-            player.inventory.hops.Add(hop);
-
-            player.money -= priceOfHops;
-        }
-
-
-        public void SellLemons()
+        public void SellLemons(Player player)
         {
             Console.WriteLine("Enter how many lemons you would like to buy: \n\r '10' - '30' - '75'");
             int numberOfLemons = Console.ReadLine();
+            switch (numberOfLemons)
+            {
+                case 10:
+                    double priceOfLemons = 0.75;
+                    Lemon lemon = new lemons();
+                    player.invetory.Lemons.Add(lemon);
 
+                    player.bank -= priceOfLemons;
+                    break;
+                case 30:
+                    double priceOfLemons = 2.40;
+                    Lemons lemon = new lemons();
+                    player.invetory.Lemons.Add(lemon);
+
+                    player.bank -= priceOfLemons;
+                    break;
+                case 75:
+                    double priceOfLemons = 4.45;
+                    Lemons lemon = new lemons();
+                    player.invetory.Lemons.Add(lemon);
+
+                    player.bank -= priceOfLemons;
+                    break;
+                default:
+                    SellLemons(player);
+                    break;
+            }
         }
 
-        public void buyCups()
+        public void SellCups(Player player)
         {
-            Console.WriteLine("You currently have, " + invetoryCups + "cups. Enter how many you would like to buy. \n\r 25 - 50 - 100");
+            Console.WriteLine("Enter how many cups you would like to buy: \n\r '25' - '50' - '100'");
+            int numberOfCups = Console.ReadLine();
+            switch (numberOfCups)
+            {
+                case 25:
+                    double priceOfcups = 0.75;
+                    cups cup = new cups();
+                    player.invetory.Cups.Add(cup);
+
+                    player.bank -= priceOfCups;
+                    break;
+                case 50:
+                    double priceOfCups = 2.40;
+                    cups cup = new cups();
+                    player.invetory.Cups.Add(cup);
+
+                    player.bank -= priceOfCups;
+                    break;
+                case 100:
+                    double priceOfCups = 4.45;
+                    cups cup = new cups();
+                    player.invetory.Cups.Add(cup);
+
+                    player.bank -= priceOfCups;
+                    break;
+                default:
+                    SellCups(player);
+                    break;
+            }
         }
 
-        private void buyLemons()
-        {
-
-        }
 
         private void buySugar()
         {

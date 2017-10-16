@@ -24,9 +24,18 @@ namespace LemonadeStand
 
         //member methods
 
+        // We are currently in the Game class
+        // The method "InfluenceChanceBasedOnPrice() is located in the Customer class
+        //for (int i = 0; i<day.customers.Count; 
+        // {
+        //day.customers[i].InfluenceChanceBasedOnPrice(player.recipe.price);
+        // }
+
+
         public void displayRules()
         {
-            Console.WriteLine("//WRITE OUT RULES!!!!!");
+            Console.WriteLine("Your goal is to make as much money possible in 7 days. \n\rBuy cups, lemons, sugar, raspberrys and ice cubes and alter your recipe and your price based on the weather. \n\rMay the odds be ever in your favor");
+            Console.ReadLine();
         }
 
         private void displayWeatherWeek()
@@ -86,6 +95,9 @@ namespace LemonadeStand
                     break;
                 case "ice cubes":
                     
+                    break;
+                default:
+                    buyItems();
                     break;
            }
         }

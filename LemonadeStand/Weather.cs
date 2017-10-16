@@ -12,20 +12,29 @@ namespace LemonadeStand
         public string Rainy;
         public string Sunny;
         public string Overcast;
-        public string SunnyAndHumid;
 
         //constructor
         public Weather()
         {
-
+            List<string> forecast = new List<string>();
+            forecast.Add("Rainy");
+            forecast.Add("Overcast");
+            forecast.Add("Sunny");
         }
 
         //member methods
-        List<string> forecast = new List<string>();
-        forecast.Add("Rainy");
-        forecast.Add("Overcast");
-        forecast.Add("Sunny");
-        forecast.Add("Sunny and Humid");
+        public void forecast()
+        {
+            List<string> forecast = new List<string>();
+            var rnd = new Random();
+            var result = forecast.OrderBy(item => rnd.Next());
+        }
+
+        public void temperature()
+        {
+            Random rnd = new Random();
+            int temperature = rnd.Next(50, 100);
+        }
 
 
 

@@ -8,5 +8,17 @@ namespace LemonadeStand
 {
     class Bank
     {
+        //member variables
+
+
+        //constructor
+        public Bank()
+        {
+
+        }
+
+        //member methods
+
+
     }
 }

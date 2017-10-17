@@ -9,6 +9,14 @@ namespace LemonadeStand
 {
     class SQL
     {
-        
+        //member variables
+
+        //constructor
+        public SQL()
+        {
+
+        }
+
+        //member methods
     }
 }

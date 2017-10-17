@@ -13,7 +13,7 @@ namespace LemonadeStand
         public List<int> Sugar = new List<int>();
         public List<int> Cups = new List<int>();
         public List<int> Raspberrys = new List<int>();
-        public List<int> iceCubes = new List<int>();
+        public List<int> IceCubes = new List<int>();
 
 
 
@@ -44,7 +44,7 @@ namespace LemonadeStand
 
         }
 
-        public void IceCubes()
+        public void iceCubes()
         {
 
         }

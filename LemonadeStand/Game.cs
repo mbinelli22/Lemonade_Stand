@@ -38,40 +38,37 @@ namespace LemonadeStand
             Console.ReadLine();
         }
 
+        public void nameStand()
+        {
+            Console.WriteLine("Enter your name: ");
+            string playerOne = Console.ReadLine();
+            Console.WriteLine("Welcome To " + playerOne + "'s Lemonade Stand!");
+        }
+
         private void displayWeatherWeek()
         {
 
         }
 
-        public void displayWeatherCurrentDay()
+        public void displayWeatherCurrentDay(Weather weather)
         {
-
+            Console.WriteLine("Todays weather is: " +  day.weather.temperature + "degrees fahrenheit.");
         }
 
-        private void displayMoney()
-        {
-
-        }
-
-        private void displayCurrentDay()
-        {
-
-        }
-
-        private void displayCurrentInvetory()
+       private void displayCurrentInvetory()
         {
 
 
 
             Console.WriteLine("Would you like to restock on any items?");
-            bool restockAnswer = Console.ReadLine(); 
-            if (!restockAnswer)
+            string restockAnswer = Console.ReadLine(); 
+            if (restockAnswer == "yes")
             {
-                // continue to playing game
+                buyItems();
             }
             else
             {
-                buyItems();
+                //go to play game 
             }
         }
 
@@ -82,19 +79,19 @@ namespace LemonadeStand
             switch (userInput)
             {
                 case "cups":
-                    
+                    store.SellCups(player);
                     break;
                 case "lemon":
-                    
+                    store.SellLemons(player);
                     break;
                 case "sugar":
-                    
+                    store.sellSugar(player);
                     break;
                 case "raspberry":
-                    
+                    store.sellRaspberrys(player);
                     break;
                 case "ice cubes":
-                    
+                    store.sellIceCubes(player);
                     break;
                 default:
                     buyItems();

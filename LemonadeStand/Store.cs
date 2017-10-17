@@ -45,7 +45,7 @@ namespace LemonadeStand
                     break;
                 case 75:
                     double priceOfLemons = 4.45;
-                    Lemons lemon = new lemons();
+                    Lemons lemon = new lemons(); 
                     player.invetory.Lemons.Add(lemon);
 
                     player.bank -= priceOfLemons;
@@ -90,19 +90,103 @@ namespace LemonadeStand
         }
 
 
-        private void buySugar()
+        public void sellSugar(Player player)
         {
+            Console.WriteLine("Enter how many cups of sugar you would like to buy: \n\r '8' - '20' - '50'");
+            int numberOfSugarCups = Console.ReadLine();
+            switch (numberOfSugarCups)
+            {
+                case 8:
+                    double priceOfSugar = 0.75;
+                    sugar sugar = new sugar();
+                    player.invetory.Sugar.Add(sugar);
 
+                    player.bank -= priceOfSugar;
+                    break;
+                case 20:
+                    double priceOfSugar = 1.60;
+                    sugar sugar = new sugar();
+                    player.invetory.Sugar.Add(sugar);
+
+                    player.bank -= priceOfSugar;
+                    break;
+                case 50:
+                    double priceOfSugar = 3.30;
+                    sugar sugar = new sugar();
+                    player.invetory.Sugar.Add(sugar);
+
+                    player.bank -= priceOfSugar;
+                    break;
+                default:
+                    sellSugar(player);
+                    break;
+            }
         }
 
-        private void buyRaspberrys()
+        public void sellRaspberrys(Player player)
         {
+            Console.WriteLine("Enter how many lemons you would like to buy: \n\r '10' - '30' - '75'");
+            int numberOfRaspberrys = Console.ReadLine();
+            switch (numberOfRaspberrys)
+            {
+                case 15:
+                    double priceOfRaspberrys= 0.90;
+                    Raspberrys raspberrys = new Raspberrys();
+                    player.invetory.Raspberrys.Add(raspberrys);
 
+                    player.bank -= priceOfRaspberrys;
+                    break;
+                case 30:
+                    double priceOfRaspberrys = 2.90;
+                    Raspberrys raspberrys = new Raspberrys();
+                    player.invetory.Raspberrys.Add(raspberrys);
+
+                    player.bank -= priceOfRaspberrys;
+                    break;
+                case 75:
+                    double priceOfLemons = 5.00;
+                    Lemons lemon = new lemons();
+                    player.invetory.Lemons.Add(lemon);
+
+                    player.bank -= priceOfLemons;
+                    break;
+                default:
+                    SellLemons(player);
+                    break;
+            }
         }
 
-        private void buyIceCubes()
+        public void sellIceCubes(Player player)
         {
+            Console.WriteLine("Enter how many ice cubes you would like to buy: \n\r '10' - '30' - '75'");
+            int numberOfIceCubes = Console.ReadLine();
+            switch (numberOfIceCubes)
+            {
+                case 100:
+                    double priceOfIceCubes = 0.75;
+                    iceCubes iceCubes = new iceCubes();
+                    player.invetory.IceCubes.Add(iceCubes);
 
+                    player.bank -= priceOfIceCubes;
+                    break;
+                case 200:
+                    double priceOfIceCubes = 2.15;
+                    iceCubes iceCubes = new iceCubes();
+                    player.invetory.IceCubes.Add(iceCubes);
+
+                    player.bank -= priceOfIceCubes;
+                    break;
+                case 500:
+                    double priceOfIceCubes = 4.00;
+                    iceCubes iceCubes = new iceCubes();
+                    player.invetory.IceCubes.Add(iceCubes);
+
+                    player.bank -= priceOfIceCubes;
+                    break;
+                default:
+                    sellIceCubes(player);
+                    break;
+            }
         }
 
 

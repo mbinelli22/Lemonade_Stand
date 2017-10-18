@@ -24,30 +24,6 @@ namespace LemonadeStand
         }
 
         //member methods
-      public void lemons()
-        {
-
-        }
-
-        public void sugar()
-        {
-
-        }
-
-        public void cups()
-        {
-
-        }
-
-        public void raspberrys()
-        {
-
-        }
-
-        public void iceCubes()
-        {
-
-        }
 
 
     }

@@ -31,10 +31,7 @@ namespace LemonadeStand
             {
                 case 10:
                     double priceOfLemons = 0.75;
-                    Lemon lemon = new lemons();
-                    player.invetory.Lemons.Add(lemon);
-
-                    player.bank -= priceOfLemons;
+                    lemons lemon =
                     break;
                 case 30:
                     double priceOfLemons = 2.40;

@@ -34,7 +34,9 @@ namespace LemonadeStand
 
         public void displayRules()
         {
-            Console.WriteLine("Your goal is to make as much money possible in 7 days. \n\rBuy cups, lemons, sugar, raspberrys and ice cubes and alter your recipe and your price based on the weather. \n\rMay the odds be ever in your favor");
+            Console.WriteLine("Your goal is to make as much money possible in 7 days.");
+            Console.WriteLine("Buy cups, lemons, sugar, raspberrys and ice cubes and alter your recipe and your price based on the weather.");
+            Console.WriteLine("May the odds be ever in your favor.");
             Console.ReadLine();
         }
 
